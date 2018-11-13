@@ -13,5 +13,11 @@ namespace SomethingBorrowed.Controllers
         {
             return View();
         }
+
+        public ActionResult CreateNew()
+        {
+
+            return View();
+        }
     }
 }
