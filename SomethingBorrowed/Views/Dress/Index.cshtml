@@ -1,0 +1,69 @@
+﻿
+@model IEnumerable<SomethingBorrowed.Models.Dress>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateNew", "Dress")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dressID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ownerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.designer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pricePaid)
+        </th>
+        <th></th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dressID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ownerID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.designer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pricePaid)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Dress", new { id = item.dressID }) |
+                    @Html.ActionLink("Details", "Details", "Dress", new { id = item.dressID }) |
+                    @Html.ActionLink("Delete", "Delete", "Dress", new { id = item.dressID })
+                </td>
+            </tr>
+        }
+
+    }
+</table>
