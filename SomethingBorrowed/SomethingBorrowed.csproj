@@ -242,6 +242,9 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Dress\Index.cshtml" />
     <Content Include="Views\Dress\CreateNew.cshtml" />
+    <Content Include="Views\Dress\Edit.cshtml" />
+    <Content Include="Views\Dress\Details.cshtml" />
+    <Content Include="Views\Dress\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
