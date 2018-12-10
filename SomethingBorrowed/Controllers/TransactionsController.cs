@@ -6,18 +6,22 @@ using System.Web.Mvc;
 
 namespace SomethingBorrowed.Controllers
 {
-    public class HomeController : Controller
+    public class TransactionsController : Controller
     {
+        // GET: Transactions
         public ActionResult Index()
         {
             return View();
         }
 
-
-        public ActionResult Schedule()
+        public ActionResult Create()
         {
             return View();
         }
-    
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }

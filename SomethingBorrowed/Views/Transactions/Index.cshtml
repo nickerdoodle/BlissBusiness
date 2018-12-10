@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SomethingBorrowed.Models.Transaction>
+
+@{
+    ViewBag.Title = "Transactions";
+}
+
+<div class="jumbotron">
+    <h1>
+        Transactions
+    </h1>
+</div>
+
+<div class="jumbotron">
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.transactionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.transactionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dressID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.startRentalDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.endRentalDate)
+            </th>
+            <th></th>
+        </tr>
+@if (Model != null)
+{
+
+
+    foreach (var item in Model)
+    {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.transactionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.transactionDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dressID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.startRentalDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.endRentalDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.transactionID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.transactionID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.transactionID })
+                </td>
+            </tr>
+    }
+}
+    </table>
+
+</div>
