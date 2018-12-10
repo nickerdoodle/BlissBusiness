@@ -14,9 +14,7 @@ namespace SomethingBorrowed.Controllers
             return View();
         }
 
-<<<<<<< HEAD
-        public ActionResult Create()
-=======
+
         public ActionResult CreateNew()
         {
             return View();
@@ -33,7 +31,7 @@ namespace SomethingBorrowed.Controllers
         }
 
         public ActionResult Delete()
->>>>>>> 86fd3926a47d73ac6a446d764211e03023633146
+
         {
             return View();
         }

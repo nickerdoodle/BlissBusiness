@@ -153,11 +153,8 @@
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Dress.cs" />
-
     <Compile Include="Models\Transaction.cs" />
-
     <Compile Include="Models\NewDress.cs" />
-
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -245,21 +242,14 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-
     <Content Include="Views\Transactions\Index.cshtml" />
     <Content Include="Views\Transactions\Create.cshtml" />
     <Content Include="Views\Transactions\Edit.cshtml" />
-
     <Content Include="Views\Dress\Index.cshtml" />
-
-    <Content Include="Views\Dress\Create.cshtml" />
-
     <Content Include="Views\Dress\CreateNew.cshtml" />
     <Content Include="Views\Dress\Edit.cshtml" />
     <Content Include="Views\Dress\Details.cshtml" />
     <Content Include="Views\Dress\Delete.cshtml" />
-
-
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
