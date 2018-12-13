@@ -13,6 +13,8 @@ namespace SomethingBorrowed.Controllers
     public class HomeController : Controller
     {
         private BridalContext db = new BridalContext();
+
+        [Authorize]
         public ActionResult Index()
         {
             return View();
@@ -51,6 +53,28 @@ namespace SomethingBorrowed.Controllers
                 return View();
             }
         
+        }
+
+        public ActionResult Create()
+        {
+            ViewBag.OwnerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName");
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(FormCollection form, bool rememberMe = false)
+        {
+            String email = form["Email Address"].ToString();
+            String password = form["Password"].ToString();
+            String owner = form["OwnerID"].ToString();
+
+            db.Database.ExecuteSqlCommand(
+            "INSERT INTO Login(Email,Password,OwnerID)" +
+            " VALUES('" + email + "', '" + password + "', '" + owner + "'); " );
+
+            FormsAuthentication.SetAuthCookie(email, rememberMe);
+            return RedirectToAction("Index", "Home");
+
         }
 
     }
