@@ -12,6 +12,7 @@ namespace SomethingBorrowed.Models
     {
        
         [Key]
+        [Required(ErrorMessage = "Please enter an owner")]
         [Display(Name = "Dress ID")]
         public int dressID { get; set; }
         /* [ForeignKey]*/
@@ -19,12 +20,19 @@ namespace SomethingBorrowed.Models
         public virtual int? OwnerID { get; set; }
 
         [Display(Name = "Designer")]
+        [Required(ErrorMessage = "Please enter the dress designer")]
         public String DressDesigner { get; set; }
+
         [Display(Name = "Year Purchased ")]
+        [Required(ErrorMessage = "Please enter a year")]
         [DataType(DataType.Date)]
         public DateTime DressYear { get; set; }
+
+        [Required(ErrorMessage ="Please enter the dress color")]
         [Display(Name = "Color")]
         public String DressColor { get; set; }
+
+        [Required(ErrorMessage = "Please enter the purchase price of the dress")]
         [Display(Name = "Price Paid")]
         public Decimal DressPricePaid { get; set; }
         public virtual DressSize DressSize { get; set; }
