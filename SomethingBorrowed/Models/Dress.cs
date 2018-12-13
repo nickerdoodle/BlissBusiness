@@ -7,20 +7,28 @@ using System.Web;
 
 namespace SomethingBorrowed.Models
 {
+    [Table("Dress")]
     public class Dress
     {
-       /* [Table("Dress")]*/
+       
         [Key]
+        [Display(Name = "Dress ID")]
         public int dressID { get; set; }
         /* [ForeignKey]*/
         public virtual Owner Owner { get; set; }
-        public virtual int ownerID { get; set; }
-        
-        public String designer { get; set; }
-        public String year { get; set; }
-        public String color { get; set; }
-        public Double pricePaid { get; set; }
-        public String size { get; set; }
+        public virtual int? OwnerID { get; set; }
+
+        [Display(Name = "Designer")]
+        public String DressDesigner { get; set; }
+        [Display(Name = "Year Purchased ")]
+        [DataType(DataType.Date)]
+        public DateTime DressYear { get; set; }
+        [Display(Name = "Color")]
+        public String DressColor { get; set; }
+        [Display(Name = "Price Paid")]
+        public Decimal DressPricePaid { get; set; }
+        public virtual DressSize DressSize { get; set; }
+        public virtual int DressSizeID { get; set; }
 
 
     }

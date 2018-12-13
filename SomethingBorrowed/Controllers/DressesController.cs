@@ -18,7 +18,7 @@ namespace SomethingBorrowed.Controllers
         // GET: Dresses
         public ActionResult Index()
         {
-            var dresses = db.Dresses.Include(d => d.Owner);
+            var dresses = db.Dresses.Include(d => d.DressSize).Include(d => d.Owner);
             return View(dresses.ToList());
         }
 
@@ -40,7 +40,8 @@ namespace SomethingBorrowed.Controllers
         // GET: Dresses/Create
         public ActionResult Create()
         {
-            ViewBag.ownerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName");
+            ViewBag.DressSizeID = new SelectList(db.DressSizes, "DressSizeID", "DressSizeID");
+            ViewBag.OwnerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace SomethingBorrowed.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "dressID,ownerID,designer,year,color,pricePaid,size")] Dress dress)
+        public ActionResult Create([Bind(Include = "dressID,OwnerID,DressDesigner,DressYear,DressColor,DressPricePaid,DressSizeID")] Dress dress)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +59,8 @@ namespace SomethingBorrowed.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ownerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName", dress.ownerID);
+            ViewBag.DressSizeID = new SelectList(db.DressSizes, "DressSizeID", "DressSizeDesc", dress.DressSizeID);
+            ViewBag.OwnerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName", dress.OwnerID);
             return View(dress);
         }
 
@@ -74,7 +76,8 @@ namespace SomethingBorrowed.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ownerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName", dress.ownerID);
+            ViewBag.DressSizeID = new SelectList(db.DressSizes, "DressSizeID", "DressSizeDesc", dress.DressSizeID);
+            ViewBag.OwnerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName", dress.OwnerID);
             return View(dress);
         }
 
@@ -83,7 +86,7 @@ namespace SomethingBorrowed.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "dressID,ownerID,designer,year,color,pricePaid,size")] Dress dress)
+        public ActionResult Edit([Bind(Include = "dressID,OwnerID,DressDesigner,DressYear,DressColor,DressPricePaid,DressSizeID")] Dress dress)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +94,8 @@ namespace SomethingBorrowed.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ownerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName", dress.ownerID);
+            ViewBag.DressSizeID = new SelectList(db.DressSizes, "DressSizeID", "DressSizeID", dress.DressSizeID);
+            ViewBag.OwnerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName", dress.OwnerID);
             return View(dress);
         }
 

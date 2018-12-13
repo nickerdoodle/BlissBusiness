@@ -11,6 +11,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.DressSize.DressSizeDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DressSize.DressSizeDesc)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Owner.OwnerFirstName)
         </dt>
 
@@ -19,43 +27,35 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.designer)
+            @Html.DisplayNameFor(model => model.DressDesigner)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.designer)
+            @Html.DisplayFor(model => model.DressDesigner)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.year)
+            @Html.DisplayNameFor(model => model.DressYear)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.year)
+            @Html.DisplayFor(model => model.DressYear)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.color)
+            @Html.DisplayNameFor(model => model.DressColor)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.color)
+            @Html.DisplayFor(model => model.DressColor)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.pricePaid)
+            @Html.DisplayNameFor(model => model.DressPricePaid)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.pricePaid)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.size)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.size)
+            @Html.DisplayFor(model => model.DressPricePaid)
         </dd>
 
     </dl>
