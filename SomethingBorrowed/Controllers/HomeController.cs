@@ -13,6 +13,8 @@ namespace SomethingBorrowed.Controllers
     public class HomeController : Controller
     {
         private BridalContext db = new BridalContext();
+
+        [Authorize]
         public ActionResult Index()
         {
             return View();
@@ -37,9 +39,9 @@ namespace SomethingBorrowed.Controllers
 
             var currentUser = db.Database.SqlQuery<Login>(
             "Select * " +
-            "FROM Users " +
-            "WHERE UserID = '" + email + "' AND " +
-            "UserPassword = '" + password + "'");
+            "FROM Login " +
+            "WHERE Email = '" + email + "' AND " +
+            "Password = '" + password + "'");
 
             if (currentUser.Count() > 0)
             {
@@ -51,6 +53,26 @@ namespace SomethingBorrowed.Controllers
                 return View();
             }
         
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(FormCollection form, bool rememberMe = false)
+        {
+            String email = form["Email Address"].ToString();
+            String password = form["Password"].ToString();
+
+            db.Database.SqlQuery<Login>(
+            "INSERT INTO Login(Email,Password,OwnerID)" +
+            "VALUES('"+email+"', '"+password+"', 3); " );
+
+            FormsAuthentication.SetAuthCookie(email, rememberMe);
+            return RedirectToAction("Index", "Home");
+
         }
 
     }
