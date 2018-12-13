@@ -173,6 +173,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Graphics\backgroundfloral.jpg" />
     <Content Include="Content\Graphics\HomeBackground.jpg" />
     <Content Include="Content\Graphics\HomeBackground2.jpg" />
     <Content Include="Content\Graphics\JumbotronLogo.jpg" />
@@ -263,6 +264,11 @@
     <Content Include="Views\Dress\Delete.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Owner\Index.cshtml" />
+    <Content Include="Views\Owner\Create.cshtml" />
+    <Content Include="Views\Owner\ConfirmNewOwner.cshtml" />
+    <Content Include="Views\Owner\Edit.cshtml" />
+    <Content Include="Views\Owner\Delete.cshtml" />
+    <Content Include="Views\Owner\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

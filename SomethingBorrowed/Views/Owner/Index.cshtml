@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<SomethingBorrowed.Models.Owner>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Dress Owners";
 }
 
-<h2>Index</h2>
+<h2>Dress Owners</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,28 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.OwnerFirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OwnerLastName)
+            Owner Name
         </th>
         <th>
             @Html.DisplayNameFor(model => model.OwnerEmail)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.OwnerAddress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OwnerCity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StateID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OwnerZip)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OwnerBankAccount)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.OwnerPhone)
@@ -44,28 +29,14 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.OwnerFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OwnerLastName)
+            @Html.DisplayFor(modelItem => item.OwnerFirstName)<text> </text>@Html.DisplayFor(modelItem => item.OwnerLastName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.OwnerEmail)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.OwnerAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OwnerCity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StateID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OwnerZip)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OwnerBankAccount)
+            @Html.DisplayFor(modelItem => item.OwnerAddress)<text> </text>@Html.DisplayFor(modelItem => item.OwnerCity)<text>, </text>
+            @Html.DisplayFor(modelItem => item.state.StateDesc)<text> </text>@Html.DisplayFor(modelItem => item.OwnerZip)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.OwnerPhone)

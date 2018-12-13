@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Confirm New Owner";
+}
+
+<h2>New Owner Record Successfully Created</h2>
+
+<p>New Owner <b><em>@ViewBag.OwnerName</em></b> has been created.</p>
+
+@Html.ActionLink("View Updated Owners List", "Index", null, new { @class="btn btn-light btn-outline-secondary"})

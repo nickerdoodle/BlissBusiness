@@ -11,9 +11,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body class="rounded" style="background-image: url('../../Content/Graphics/HomeBackground2.jpg'); background-repeat:no-repeat; background-size: 80%; background-position:center; background-attachment:scroll; padding-top:0 ">
+<body class="rounded" style="background-image: url('../../Content/Graphics/backgroundfloral.jpg'); background-size:contain; background-position:center; background-attachment:scroll; padding-top:0 ">
     
-    <div class="sidenav rounded sidenav">
+    <div class="sidenav rounded" style="background-color: white;">
         <p>155 N. University Ave. #155 Provo, UT 84655</p>
         <p><u>Hours by Appointment only</u></p>
         <p>bailey@@sb.com</p>
@@ -30,13 +30,13 @@
                 </button>*@
                
                 <a class="btn btn-light btn-outline-secondary" href="@Url.Action("Index","Dress")">Our Dresses</a>
-                <a class="btn btn-light btn-outline-secondary" href="@Url.Action("Index","Owners")">Owners</a>
+                <a class="btn btn-light btn-outline-secondary" href="@Url.Action("Index","Owner")">Owners</a>
                 <a class="btn btn-light btn-outline-secondary" href="@Url.Action("Shedule","Home")">Schedule</a>
                 
                 
                 <a style="margin-left:250px" class="navbar-brand rounded-0" href="@Url.Action("Index","Home")"><img width="150" height="100" class="rounded-circle" src="~/Content/Graphics/Logo.png" /> </a>
             </span>
-                </div>
+        </div>
            @* <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a class="su" href="@Url.Action("Index","Home")">Index</a></li>
@@ -47,14 +47,16 @@
         
     </div>
     
-    
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <div style="margin-left: 150px;">
+        <div class="jumbotron container body-content" style="background-color: white;">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Bliss Bridal</p>
+            </footer>
+        </div>
     </div>
+    
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
