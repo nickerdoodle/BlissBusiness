@@ -13,11 +13,11 @@ namespace SomethingBorrowed.Models
         [Key]
         public int dressID { get; set; }
        /* [ForeignKey]*/
-        public int ownerID { get; set; }
+        public virtual int ownerID { get; set; }
         public String designer { get; set; }
         public String year { get; set; }
         public String color { get; set; }
-        public float pricePaid { get; set; }
+        public Double pricePaid { get; set; }
         public String size { get; set; }
 
 

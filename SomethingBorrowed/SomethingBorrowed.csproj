@@ -153,8 +153,10 @@
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Dress.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Owner.cs" />
+    <Compile Include="Models\State.cs" />
     <Compile Include="Models\Transaction.cs" />
-    <Compile Include="Models\NewDress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +252,7 @@
     <Content Include="Views\Dress\Edit.cshtml" />
     <Content Include="Views\Dress\Details.cshtml" />
     <Content Include="Views\Dress\Delete.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
