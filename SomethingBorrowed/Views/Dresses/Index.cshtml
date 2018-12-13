@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<SomethingBorrowed.Models.Dress>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Dresses";
 }
 
-<h2>Index</h2>
+<h2>Dresses</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.DressSize.DressSizeDesc)
