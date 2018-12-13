@@ -150,7 +150,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DressController.cs" />
+    <Compile Include="Controllers\DressesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OwnerController.cs" />
     <Compile Include="Controllers\TransactionsController.cs" />
@@ -160,6 +160,7 @@
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Dress.cs" />
+    <Compile Include="Models\DressSize.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\State.cs" />
@@ -257,11 +258,6 @@
     <Content Include="Views\Transactions\Index.cshtml" />
     <Content Include="Views\Transactions\Create.cshtml" />
     <Content Include="Views\Transactions\Edit.cshtml" />
-    <Content Include="Views\Dress\Index.cshtml" />
-    <Content Include="Views\Dress\CreateNew.cshtml" />
-    <Content Include="Views\Dress\Edit.cshtml" />
-    <Content Include="Views\Dress\Details.cshtml" />
-    <Content Include="Views\Dress\Delete.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Owner\Index.cshtml" />
     <Content Include="Views\Owner\Create.cshtml" />
@@ -269,6 +265,11 @@
     <Content Include="Views\Owner\Edit.cshtml" />
     <Content Include="Views\Owner\Delete.cshtml" />
     <Content Include="Views\Owner\Details.cshtml" />
+    <Content Include="Views\Dresses\Create.cshtml" />
+    <Content Include="Views\Dresses\Delete.cshtml" />
+    <Content Include="Views\Dresses\Details.cshtml" />
+    <Content Include="Views\Dresses\Edit.cshtml" />
+    <Content Include="Views\Dresses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

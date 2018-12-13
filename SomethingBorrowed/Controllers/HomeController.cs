@@ -37,9 +37,9 @@ namespace SomethingBorrowed.Controllers
 
             var currentUser = db.Database.SqlQuery<Login>(
             "Select * " +
-            "FROM Users " +
-            "WHERE UserID = '" + email + "' AND " +
-            "UserPassword = '" + password + "'");
+            "FROM Login " +
+            "WHERE Email = '" + email + "' AND " +
+            "Password = '" + password + "'");
 
             if (currentUser.Count() > 0)
             {

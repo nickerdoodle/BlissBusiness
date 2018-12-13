@@ -17,6 +17,7 @@ namespace SomethingBorrowed.DAL
         public DbSet<Dress> Dresses { get; set; }
         public DbSet<Login> Logins { get; set; }
         public DbSet<State> States { get; set; }
+        public DbSet<DressSize> DressSizes { get; set; }
 
 
     }
