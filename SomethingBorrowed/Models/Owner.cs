@@ -24,7 +24,8 @@ namespace SomethingBorrowed.Models
 
         public String OwnerCity { get; set; }
 
-        public String OwnerState { get; set; }
+        public virtual int? StateID { get; set; }
+        public virtual State state { get; set; }
 
         public String OwnerZip { get; set; }
 

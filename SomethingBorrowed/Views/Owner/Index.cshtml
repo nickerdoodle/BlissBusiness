@@ -1,0 +1,81 @@
+﻿@model IEnumerable<SomethingBorrowed.Models.Owner>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerZip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerBankAccount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerPhone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerZip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerBankAccount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerPhone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OwnerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OwnerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OwnerID })
+        </td>
+    </tr>
+}
+
+</table>
