@@ -58,7 +58,6 @@ namespace SomethingBorrowed.Controllers
         [Authorize]
         public ActionResult Create()
         {
-            ViewBag.OwnerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName");
             return View();
         }
 
@@ -67,11 +66,10 @@ namespace SomethingBorrowed.Controllers
         {
             String email = form["Email Address"].ToString();
             String password = form["Password"].ToString();
-            String owner = form["OwnerID"].ToString();
 
             db.Database.ExecuteSqlCommand(
-            "INSERT INTO Login(Email,Password,OwnerID)" +
-            " VALUES('" + email + "', '" + password + "', '" + owner + "'); " );
+            "INSERT INTO Login(Email,Password)" +
+            " VALUES('" + email + "', '" + password + "'); " );
 
             FormsAuthentication.SetAuthCookie(email, rememberMe);
             return RedirectToAction("Index", "Home");
