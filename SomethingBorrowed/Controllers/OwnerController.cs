@@ -15,11 +15,13 @@ namespace SomethingBorrowed.Controllers
         private BridalContext db = new BridalContext();
 
         // GET: Owner
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Owners.ToList());
         }
 
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.StateID = new SelectList(db.States, "StateID", "StateDesc");
@@ -27,6 +29,7 @@ namespace SomethingBorrowed.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Owner owner)
         {
@@ -44,6 +47,7 @@ namespace SomethingBorrowed.Controllers
 
 
         [HttpGet]
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -61,6 +65,7 @@ namespace SomethingBorrowed.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Owner owner)
         {
@@ -74,6 +79,7 @@ namespace SomethingBorrowed.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -89,6 +95,7 @@ namespace SomethingBorrowed.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
@@ -99,6 +106,7 @@ namespace SomethingBorrowed.Controllers
         }
 
         // GET: Compounds/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)

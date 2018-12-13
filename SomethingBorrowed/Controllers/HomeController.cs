@@ -13,8 +13,7 @@ namespace SomethingBorrowed.Controllers
     public class HomeController : Controller
     {
         private BridalContext db = new BridalContext();
-
-        [Authorize]
+        
         public ActionResult Index()
         {
             return View();
@@ -62,6 +61,8 @@ namespace SomethingBorrowed.Controllers
         }
 
         [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(FormCollection form, bool rememberMe = false)
         {
             String email = form["Email Address"].ToString();
