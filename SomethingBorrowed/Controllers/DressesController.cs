@@ -22,6 +22,7 @@ namespace SomethingBorrowed.Controllers
             return View(dresses.ToList());
         }
 
+        [Authorize]
         // GET: Dresses/Details/5
         public ActionResult Details(int? id)
         {
@@ -37,6 +38,7 @@ namespace SomethingBorrowed.Controllers
             return View(dress);
         }
 
+        [Authorize]
         // GET: Dresses/Create
         public ActionResult Create()
         {
@@ -48,6 +50,7 @@ namespace SomethingBorrowed.Controllers
         // POST: Dresses/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "dressID,OwnerID,DressDesigner,DressYear,DressColor,DressPricePaid,DressSizeID")] Dress dress)
@@ -65,6 +68,7 @@ namespace SomethingBorrowed.Controllers
         }
 
         // GET: Dresses/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,6 +89,7 @@ namespace SomethingBorrowed.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "dressID,OwnerID,DressDesigner,DressYear,DressColor,DressPricePaid,DressSizeID")] Dress dress)
         {
@@ -100,6 +105,7 @@ namespace SomethingBorrowed.Controllers
         }
 
         // GET: Dresses/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,6 +122,7 @@ namespace SomethingBorrowed.Controllers
 
         // POST: Dresses/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
