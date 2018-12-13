@@ -163,7 +163,6 @@
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\State.cs" />
-    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
