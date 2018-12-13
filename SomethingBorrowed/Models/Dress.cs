@@ -12,7 +12,7 @@ namespace SomethingBorrowed.Models
     {
        
         [Key]
-        [Required(ErrorMessage = "Please enter an owner")]
+        
         [Display(Name = "Dress ID")]
         public int dressID { get; set; }
         /* [ForeignKey]*/
