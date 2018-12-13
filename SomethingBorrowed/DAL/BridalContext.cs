@@ -11,7 +11,15 @@ namespace SomethingBorrowed.DAL
     {
         public BridalContext() : base("BridalContext")
         {
+            
+
+            
+
+        public DbSet<Owner> Owners { get; set; }
+        public DbSet<Dress> Dresses { get; set; }
+        public DbSet<Login> Logins { get; set; }
+        public DbSet<State> States { get; set; }
 
         }
-    }
+}
 }
