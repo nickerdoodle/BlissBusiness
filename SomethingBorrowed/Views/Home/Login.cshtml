@@ -7,7 +7,7 @@
 
 <h2>Login</h2>
 <p class="text-danger">
-    Please Log In to Access Admin Information
+    Please Log In to Access Admin Functions
 </p>
 @using (Html.BeginForm("Login", "Home", FormMethod.Post))
 {
@@ -16,9 +16,4 @@
     <label for="inputPassword">Password</label>
     @Html.Password("Password")
     <button type="submit">Login</button>
-
-    
 }
-<div>
-    @Html.ActionLink("Create New User", "Create")
-</div>

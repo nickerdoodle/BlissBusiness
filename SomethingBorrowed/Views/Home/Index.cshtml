@@ -2,12 +2,11 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="text-center" >
+<div class="text-center">
     <img src="~/Content/Graphics/JumbotronLogo.jpg" alt="Something Borrowed Logo" style="height: auto; width: 50%; max-width: 600px;" />
 </div>
-
-<div class="container-fluid jumbotron-fluid rounded text-center" style="background-color: #b6f1ef">
-    <h1>Make an appointment</h1>
-    <p>Looking for dresses? Schedule an appointment to come try on our growing collection of dresses!</p>
-    <h3>Schedule Today</h3>
-</div>   
+<br />
+<div class="text-center">
+    @Html.ActionLink("Create New Admin Account", "Create", null, new { @class = "btn btn-light btn-primary" })
+</div>
+   
