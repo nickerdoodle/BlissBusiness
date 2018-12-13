@@ -12,8 +12,10 @@ namespace SomethingBorrowed.Models
        /* [Table("Dress")]*/
         [Key]
         public int dressID { get; set; }
-       /* [ForeignKey]*/
+        /* [ForeignKey]*/
+        public virtual Owner Owner { get; set; }
         public virtual int ownerID { get; set; }
+        
         public String designer { get; set; }
         public String year { get; set; }
         public String color { get; set; }
