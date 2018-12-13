@@ -12,7 +12,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body class="rounded" style="background-image: url('../../Content/Graphics/HomeBackground2.jpg'); background-repeat:no-repeat; background-size: 80%; background-position:center; background-attachment:scroll; padding-top:0 ">
-    
+
     <div class="sidenav rounded sidenav">
         <p>155 N. University Ave. #155 Provo, UT 84655</p>
         <p><u>Hours by Appointment only</u></p>
@@ -24,30 +24,30 @@
         <div class="container">
             <span class="navbar-header">
                 @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>*@
-               
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>*@
+
                 <a class="btn btn-light btn-outline-secondary" href="@Url.Action("Index","Dress")">Our Dresses</a>
                 <a class="btn btn-light btn-outline-secondary" href="@Url.Action("Index","Owners")">Owners</a>
                 <a class="btn btn-light btn-outline-secondary" href="@Url.Action("Shedule","Home")">Schedule</a>
                 
-                
+
                 <a style="margin-left:250px" class="navbar-brand rounded-0" href="@Url.Action("Index","Home")"><img width="150" height="100" class="rounded-circle" src="~/Content/Graphics/Logo.png" /> </a>
             </span>
-                </div>
-           @* <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a class="su" href="@Url.Action("Index","Home")">Index</a></li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>*@
-        
-    </div>
-    
-    
+        </div>
+            @* <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a class="su" href="@Url.Action("Index","Home")">Index</a></li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </ul>
+    </div>*@
+
+</div>
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />

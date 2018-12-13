@@ -17,7 +17,13 @@ namespace SomethingBorrowed.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View();
+            IEnumerable<Login> user =
+                db.Database.SqlQuery<Login>(
+            "Select Email,Password,OwnerID" +
+            "FROM Login" +
+            "Order by Email");
+
+            return View(user);
         }
 
 
