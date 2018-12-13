@@ -55,6 +55,7 @@ namespace SomethingBorrowed.Controllers
         
         }
 
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.OwnerID = new SelectList(db.Owners, "OwnerID", "OwnerFirstName");
